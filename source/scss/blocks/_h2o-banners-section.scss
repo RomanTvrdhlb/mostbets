@@ -1,0 +1,10 @@
+.h2o-banners-section{
+    background-color: rgba(var(--bg-l),1.0);
+    padding: 10px 0 20px;
+
+    &__box{
+        display: grid;
+        grid-template-columns: 240px 1fr 240px;
+        grid-gap: clamp(15px, 1.6129vw, 20px);
+    }
+}

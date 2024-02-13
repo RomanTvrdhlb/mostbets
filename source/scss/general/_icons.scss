@@ -74,8 +74,58 @@
 
   &-logo {
     background-image: url(../img/sprite/logo.svg);
-    width: clamp(180px, 19.0323vw, 236px);
+    width: clamp(160px, 19.0323vw, 236px);
     height: clamp(30px, 3.2258vw, 40px);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+  }
+
+  &-aside {
+    background-image: url(../img/sprite/filter.svg);
+    width: 28px;
+    height: 25px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+  }
+
+  &-all {
+    background-image: url(../img/sprite/all.svg);
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+  }
+  
+  &-circle {
+    background-image: url(../img/sprite/circle.svg);
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+  }
+
+  &-add {
+    background-image: url(../img/sprite/add.svg);
+    width: 24px;
+    height: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+  }
+  
+  &-seven {
+    background-image: url(../img/sprite/seven.svg);
+    width: 20px;
+    height: 20px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -94,8 +144,8 @@
 
   &-cup {
     background-image: url(../img/sprite/cup.svg);
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 60% 60%;
@@ -114,8 +164,8 @@
 
   &-flash {
     background-image: url(../img/sprite/flash.svg);
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 60% 60%;

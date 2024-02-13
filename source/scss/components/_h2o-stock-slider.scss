@@ -1,0 +1,43 @@
+.h2o-stock-slider{
+
+
+    .splide{
+        &__arrows{
+            display: flex;
+            position: absolute;
+            right: 0;
+            top: calc((clamp(20px, 2.4194vw, 30px) / 2) * -1);
+          
+            transform: translateY(-110%);
+            grid-gap: 10px;
+            align-items: center;
+
+            @include tablet{
+                transform: translateY(-105%);
+            }
+        }
+
+        &__arrow{
+            transform: none;
+            position: static;
+            border: 1px solid var(--br-j);
+            height: clamp(35px, 3.2258vw, 40px);
+            width: clamp(35px, 3.2258vw, 40px);
+            background-color: initial;
+            opacity: 1;
+            svg{
+                fill: rgba(var(--cl-a),1.0);
+            }
+
+            &:hover{
+                svg{
+                    fill: rgba(var(--cl-c),1.0);
+                }
+            }
+
+            &:disabled{
+                opacity: .4;
+            }
+        }
+    }
+}

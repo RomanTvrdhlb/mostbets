@@ -1,15 +1,20 @@
 //-----vars---------------------------------------
 const header = document.querySelector("header");
 const overlay = document.querySelector("[data-overlay]");
-const mobileMenu = document.querySelector(".mobile-menu");
-const burgers = document.querySelectorAll(".burger");
+const mobileMenu = document.querySelector(".h2o-mobile-menu");
+const burgers = document.querySelectorAll(".h2o-burger");
 const mainSlider = document.querySelector(".h2o-main-slider");
 const accParrent = [...document.querySelectorAll("[data-accordion-init]")];
 const htmlEl = document.documentElement;
 const bodyEl = document.body;
-const bonusCards = document.querySelectorAll(".bonus-card");
-const bonusMenuBtn = document.querySelector(".header-menu__btn");
-const tooltipBlocks = document.querySelectorAll('.main-prop');
+// const bonusCards = document.querySelectorAll(".bonus-card");
+// const bonusMenuBtn = document.querySelector(".header-menu__btn");
+// const tooltipBlocks = document.querySelectorAll('.main-prop');
+const stockSlider = document.querySelector('.h2o-stock-slider');
+const bonusSlider = document.querySelector('.h2o-bonus-slider');
+const asideMenu = document.querySelector('.h2o-sidebar');
+const asideMenuBtn = document.querySelector('.h2o-aside-button');
+const searchForms = document.querySelectorAll('.h2o-search-form');
 //------------------------------------------------
 
 //----customFunction------------------------------
@@ -81,74 +86,51 @@ const elementHeight = (el, variableName) => {
 }
 //------------------------------------------------
 
-//----bonusCardHandler----------------------------
-bonusCards &&
-  bonusCards.forEach(function (card) {
-    const btn = card.querySelector(".bonus-card__button");
-    if (btn) {
-      btn.addEventListener("click", function (e) {
-        e.preventDefault();
-        card.classList.toggle("active");
-      });
-    }
-  });
+// //----bonusCardHandler----------------------------
+// bonusCards &&
+//   bonusCards.forEach(function (card) {
+//     const btn = card.querySelector(".bonus-card__button");
+//     if (btn) {
+//       btn.addEventListener("click", function (e) {
+//         e.preventDefault();
+//         card.classList.toggle("active");
+//       });
+//     }
+//   });
 
-//----bonusMenuHandler----------------------------
-bonusMenuBtn &&
-  bonusMenuBtn.addEventListener("click", function (e) {
+//----asideMenuHandler----------------------------
+asideMenu && asideMenuBtn &&
+  asideMenuBtn.addEventListener("click", function (e) {
     e.preventDefault();
-    bonusMenuBtn.parentNode.classList.toggle("active");
+    addCustomClass(asideMenu, 'active');
   });
 
-//----bonusMenuClose-----------------------------
-bonusMenuBtn &&
+//----asideMenuClose-----------------------------
+asideMenu && asideMenuBtn &&
   document.addEventListener("click", function (event) {
-    const e = bonusMenuBtn.parentNode;
-    if (!e.contains(event.target))
-      bonusMenuBtn.parentNode.classList.remove("active");
+    if (!asideMenu.contains(event.target) && !asideMenuBtn.contains(event.target)) {
+      removeCustomClass(asideMenu, 'active');
+    }
   });
 
-//----tooltipHandler-----------------------------
-tooltipBlocks && tooltipBlocks.forEach(function(block){
-  const btn = block.querySelector('.tooltip-btn');
+// //----tooltipHandler-----------------------------
+// tooltipBlocks && tooltipBlocks.forEach(function(block){
+//   const btn = block.querySelector('.tooltip-btn');
   
-  btn && btn.addEventListener('click', function(e){
-    e.preventDefault();
-      removeClassInArray(tooltipBlocks, 'active');
-      toggleCustomClass(block, 'active');
+//   btn && btn.addEventListener('click', function(e){
+//     e.preventDefault();
+//       removeClassInArray(tooltipBlocks, 'active');
+//       toggleCustomClass(block, 'active');
 
- document.addEventListener("click", function (event) {
-    const e = block;
+//  document.addEventListener("click", function (event) {
+//     const e = block;
 
-    if (!e.contains(event.target))
-       removeCustomClass(block, 'active');
-  });
-  })
-})  
+//     if (!e.contains(event.target))
+//        removeCustomClass(block, 'active');
+//   });
+//   })
+// })  
  
-
-//----lift---------------------------------------
-if (document.getElementById("upbutton")) {
-  let timeOut;
-  window.onscroll = function () {
-    let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrolled > 500) {
-      document.getElementById("upbutton").classList.add("show");
-    } else {
-      document.getElementById("upbutton").classList.remove("show");
-    }
-  };
-  document.getElementById("upbutton").addEventListener("click", function () {
-    let top = Math.max(
-      document.body.scrollTop,
-      document.documentElement.scrollTop
-    );
-    if (top > 0) {
-      window.scrollBy(0, document.documentElement.scrollTop * -1);
-    }
-  });
-}
-
 //----accordion----------------------------------
 window.addEventListener("DOMContentLoaded", () => {
   accParrent &&
@@ -301,6 +283,44 @@ mainSlider &&
   }).mount();
 
 
+  stockSlider && new Splide( stockSlider, {
+    type   : 'slide',
+    perPage: 3,
+    speed:1200,
+    gap: 20,
+    pagination:false,
+    mediaQuery: 'min',
+    breakpoints: {
+      280: {
+        perPage: '1',
+        gap: 14,
+      },
+      576: {
+        perPage: 2,
+      },
+      1024: {
+        perPage: 2,
+        gap: 20,
+      },
+      1440: {
+        arrows:false,
+        drag:false,
+        perPage: 3,
+      },
+    }
+  } ).mount();
+
+  bonusSlider && new Splide( bonusSlider, {
+    type   : 'slide',
+    perPage: 4,
+    gap:10,
+    speed:1200,
+ 
+    pagination:false,
+  
+  } ).mount();
+
+
 //----stickyHeader------------------------------
 let lastScroll = 0;
 const defaultOffset = 40;
@@ -328,3 +348,32 @@ stickyHeaderFunction(320);
 elementHeight(header, "header-height");
 
 //----------------------------------------------
+
+searchForms.forEach(function(form){
+  const input = form.querySelector('input');
+  const value = input.value;
+  const clearBtn = form.querySelector('.h2o-search-form__clear');
+
+
+  clearBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    input.value = '';
+    removeCustomClass(clearBtn, 'active');
+  });
+
+  input.addEventListener('blur', function () {
+    removeCustomClass(clearBtn, 'active');
+  });
+
+  input.addEventListener('input', function () {
+    updateButtonClass();
+  });
+
+  function updateButtonClass() {  
+    if (value.trim() !== '') {
+      removeCustomClass(clearBtn, 'active')
+    } else {
+      addCustomClass(clearBtn, 'active');
+    }
+  }
+})

@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(16px, 1.4516vw, 18px);
+  font-size: clamp(14px, 1.4516vw, 18px);
   line-height: 1.2;
   font-weight: 500;
   padding: 10px clamp(10px, 1.6129vw, 20px);
@@ -16,6 +16,23 @@
     background-image: var(--gr-b);
     box-shadow: 0 20px 30px #fa410066;
   }
+}
+
+.h2o-add-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 11px 27px #fa4100a1;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 20px;
+  top: -20px;
+  border-radius: 50%;
+  background-image: var(--gr-j);
+  transition: all .15s;
+
 }
 
 .h2o-blue-button {
@@ -29,11 +46,22 @@
   line-height: 1.2;
   text-align: center;
   background-image: var(--gr-c);
-  font-size: clamp(16px, 1.4516vw, 18px);
+  font-size: clamp(14px, 1.4516vw, 18px);
   padding: 10px clamp(10px, 1.6129vw, 20px);
 
   &:hover {
     background-image: var(--gr-d);
+  }
+
+  &--mode{
+    background-image: var(--gr-l);
+    box-shadow: 0 11px 27px #046ddf3b;
+    transition: all .2s;
+
+    &:hover{
+      background-image: var(--gr-l);
+      box-shadow: 0 11px 27px #046ddfa1;
+    }
   }
 }
 
@@ -66,6 +94,22 @@
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
+
+  @include laptop{
+    width: 40px;
+    height: 40px;
+    text-indent: -999px;
+    overflow: hidden;
+
+    i{
+      left: 4px;
+      flex-shrink: 0;
+    }
+  }
+
+  &:hover{
+    box-shadow: inset 0 0 0 1.5px #fff;
+  }
 }
 
 .h2o-action-button {
@@ -87,6 +131,14 @@
 
   &:hover {
     color: rgba(var(--cl-c), 1);
+
+    i{
+      filter: none;
+    }
+  }
+
+  i{
+    filter: brightness(300%)  grayscale(1);
   }
 }
 

@@ -1,7 +1,6 @@
 .h2o-first-section {
   position: relative;
-  padding-bottom: clamp(20px, 2.4194vw, 30px);
-  margin-top: -20px;
+  margin:-20px 0 clamp(20px, 2.4194vw, 30px);
   min-height: 370px;
 
   @include for-big-desktop {
@@ -18,5 +17,27 @@
 
   &__box {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+  }
+
+  &__inner{
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 20px;
+
+    @include tablet{
+      display: flex;
+
+      .h2o-search-form{
+        padding: 0;
+        
+        &__input{
+          max-width: 100%;
+        }
+      }
+    }
   }
 }

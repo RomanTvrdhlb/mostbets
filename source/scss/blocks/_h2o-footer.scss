@@ -1,6 +1,6 @@
 footer{
   background-color: rgba(var(--bg-i),1.0);
-  padding: 20px 0 0;
+  padding: clamp(15px, 1.6129vw, 20px) 0 0;
 }
 
 .h2o-footer{

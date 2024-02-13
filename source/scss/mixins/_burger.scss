@@ -61,14 +61,14 @@
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     }
 
-    .burger__line {
+    .h2o-burger__line {
       transform: scale(0);
       transition: transform 0.3s ease-in-out;
     }
   }
 }
 
-.burger {
+.h2o-burger {
   display: none;
   @include tablet{
     @include burger;

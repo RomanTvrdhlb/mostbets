@@ -28,8 +28,43 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      grid-gap: 20px;
+      grid-gap: clamp(10px, 1.6129vw, 20px);
       flex-grow: 1;
+
+      @include small-tablet{
+        button{
+          font-size: 12px;
+        }
+      }
+
+      @include mobile{
+        button{
+          width: 100%;
+        }
+      }
+    }
+
+    @include mobile{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+    }
+
+    .h2o-logo{
+      display: none;
+
+      @include tablet{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      @include mobile{
+        top: 0;
+        transform: translate(-50%, -20%);
+      }
     }
   }
 
@@ -37,10 +72,24 @@
     display: flex;
     align-items: center;
     grid-gap: 10px;
+
+    .h2o-icon-logo{
+      @include laptop{
+        background-image: url(../img/index/logo.png);
+        width: 46px;
+        height: 46px;
+      }
+    }
+
+    @include tablet{
+      display: none;
+    }
   }
 
-  .h2o-burger{
-   order: 4;
+  @include tablet{
+    .h2o-download-links,.h2o-lock-button,.h2o-yellow-button,.h2o-action-button,.h2o-action-button{
+      display: none;
+    }
   }
 }
 

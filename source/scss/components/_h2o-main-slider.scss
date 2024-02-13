@@ -47,22 +47,11 @@
     }
   }
 
-    // &__slide {
-    //     padding:3px;
-    //   position: relative;
-    // }
-    // @media (max-width: (1177px)) {
-    //     max-width: calc(100vw - (323px + (var(--container-offset) * 2)));
-    //   }
-  
-
-    // @include tablet{
-    //     max-width: calc(100vw - (8px + (var(--container-offset) * 2)));
-    // }
-
-    // @include small-tablet{
-    //     max-width: calc(100vw - (var(--container-offset) * 2));
-    // }
+  &__button{
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+}
   
     .splide{
    

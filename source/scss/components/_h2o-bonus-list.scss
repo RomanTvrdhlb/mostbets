@@ -1,0 +1,5 @@
+.h2o-bonus-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    grid-gap: clamp(15px, 1.6129vw, 20px);
+}
