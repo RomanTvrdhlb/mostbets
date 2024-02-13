@@ -1,0 +1,17 @@
+.h2o-stock-card{
+    border: 10px solid var(--br-f);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: border-color .4s;
+    width: 100%;
+
+    &:hover{
+        border-color: var(--br-g);
+    }
+
+    &__image{
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,79 @@
+.main-review{
+    position: relative;
+    background: rgba(var(--bg-n),1.0);
+    border: 1px solid var(--br-c);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+
+    &__title{
+        font-size: clamp(15px, 1.4035vw, 16px);
+        line-height: 130%;
+        font-weight: 700;
+        color: rgba(var(--cl-d),1.0);
+        font-family: var(--font-family);
+    }
+
+    &__date{
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(var(--cl-y),1.0);
+        font-family: var(--font-family);
+    }
+
+    &__user{
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+    }    
+
+    &__top{
+        display: flex;
+        grid-gap: clamp(10px, 1.3158vw, 15px);
+        align-items: center;
+    }
+
+    &__bottom{
+        display: flex;
+        align-items: center;
+        grid-gap: clamp(15px, 1.7544vw, 20px);
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 5px;
+    }
+
+    &__rang{
+        background: rgba(var(--bc-j),1.0);
+        border-radius: 2px;
+        font-size: 13px;
+        line-height: 19px;
+        font-weight: 700;
+        padding: 0 10px;
+        color: rgba(var(--cl-a),1.0);
+        font-family: var(--font-family);
+    }
+
+    p{
+        font-family: var(--font-family);
+        color: rgba(var(--cl-d),1.0);
+        font-size: clamp(14px, 1.4035vw, 16px);
+        line-height: 140%;
+    }
+
+    &__text{
+        font-family: var(--font-family);
+        font-size: clamp(14px, 1.4035vw, 16px);
+        line-height: 140%;
+        font-weight: 700;
+        color: rgba(var(--cl-d),1.0);
+    }
+
+    .rating__value{
+        font-weight: 700;
+        color: rgba(var(--cl-d),1.0);
+    }
+}

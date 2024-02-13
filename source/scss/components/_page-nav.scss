@@ -1,0 +1,39 @@
+.page-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 4px;
+
+    &__link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        text-align: center;
+        border-radius: 100%;
+        color: rgba(var(--cl-k),1.0);
+        border: 1px solid var(--br-j);
+        background-color: rgba(var(--bg-n),1.0);
+        font-family: var(--font-family);
+        font-size: 16px;
+        line-height: 120%;
+        font-weight: 700;
+        transition: all .3s;
+      
+        &.active{
+            background-color: rgba(var(--bg-o),1.0);
+            border-color: var(--br-k);
+            color: rgba(var(--cl-a),1.0);
+
+            &:hover{
+                background-color: rgba(var(--bg-o),1.0);
+                opacity: .7;
+            }
+        }
+
+        &:hover{
+            background-color: rgba(var(--bg-b),0.07);
+        }
+    }
+}

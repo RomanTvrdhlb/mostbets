@@ -1,0 +1,22 @@
+.h2o-first-section {
+  position: relative;
+  padding-bottom: clamp(20px, 2.4194vw, 30px);
+  margin-top: -20px;
+  min-height: 370px;
+
+  @include for-big-desktop {
+    min-height: 460px;
+  }
+
+  @media (max-width: (1300px)) {
+    min-height: clamp(205px, 20.577vw, 300px);
+  }
+
+  @include tablet{
+    min-height: initial;
+  }
+
+  &__box {
+    position: relative;
+  }
+}

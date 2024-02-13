@@ -1,0 +1,20 @@
+.h2o-main-social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-gap: clamp(10px, 1.2097vw, 15px) 15px;
+    background-color: rgba(var(--bg-n),1.0);
+    border-radius: 16px;
+    padding: 10px;
+
+    @include small-tablet{
+        justify-content: center;
+    }
+
+    &--mode{
+        border-radius: 0;
+        padding: 10px var(--container-offset);
+        margin: 0 calc(var(--container-offset) * -1);
+    }
+}

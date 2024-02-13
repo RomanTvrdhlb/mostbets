@@ -1,0 +1,42 @@
+.h2o-choice-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(var(--bg-a),1.0);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+
+    &__item{
+        align-items: center;
+        display: flex;
+        height: 60px;
+        width: 100%;
+        border-top: 2px solid var(--br-d);
+
+        &--mode{
+            background-color: rgba(var(--bg-f),1.0);
+            border-top: 2px solid var(--br-c);
+        }
+    }
+
+    &__link{
+        align-items: center;
+        font-family: var(--font-family);
+        color: var(--color-main-black);
+        display: flex;
+        transition: .2s;
+        width: 100%;
+        grid-gap: 10px;
+        padding: 0 10px;
+
+        &:hover{
+            color: rgba(var(--cl-e),1.0);
+        }
+
+        &.active{
+            color: rgba(var(--cl-e),1.0);
+        }
+    }
+
+}

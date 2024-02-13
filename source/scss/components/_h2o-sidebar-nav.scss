@@ -1,0 +1,41 @@
+.h2o-sidebar-nav{
+    display: flex;
+    flex-direction: column;
+    
+    &__item{
+        display: flex;
+        align-items: center;        
+        padding: 0 10px;
+
+        &:not(:first-child){
+            border-top: 2px solid var(--br-b);
+        }
+    }
+
+
+    &__link{
+        font-family: var(--font-family);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 60px;
+        max-width: 160px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+        white-space: nowrap;
+        color: rgba(var(--cl-a),1.0);
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+        display: flex;
+        height: 60px;
+
+        &:hover{
+            color: rgba(var(--cl-e),1.0);
+        }
+
+        &.active{
+            color: rgba(var(--cl-c),1.0);
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.h2o-header-nav {
+  align-items: center;
+  background-color: rgba(var(--bg-e), 1);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 5px;
+
+  &__item {
+    padding: 10px clamp(10px, 1.189vw, 20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link {
+    font-family: var(--font-family);
+    align-items: center;
+    color: rgba(var(--cl-a), 1);
+    display: flex;
+    font-size: clamp(14px, 1.4516vw, 18px);
+    font-weight: 500;
+    justify-content: center;
+    line-height: 1.15;
+
+    text-align: center;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+
+    &:hover {
+      color: rgba(var(--cl-c), 1);
+
+      .h2o-plane{
+        bottom: 0;
+        opacity: 1;
+      }
+    }
+
+    &.active {
+      color: rgba(var(--cl-d), 1);
+    }
+
+    &--mode {
+      color: rgba(var(--cl-c), 1);
+    }
+  }
+
+  .h2o-plane{
+    bottom: -20px;
+    opacity: 0;
+    position: relative;
+    transform: scale(.9);
+    transition: opacity .5s linear,bottom .5s linear;
+  }
+}

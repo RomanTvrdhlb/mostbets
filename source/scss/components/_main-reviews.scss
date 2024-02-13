@@ -1,0 +1,30 @@
+.main-reviews{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(15px, 1.7544vw, 20px);
+    
+    &__btns{
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        grid-gap: 10px 15px;
+
+        .main-button{
+            width: 200px;
+            @include mobile{
+                width: 100%;
+            }
+        }
+
+
+        @include mobile{
+            flex-direction: column;
+        }
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(15px, 1.7544vw, 20px);
+    }
+}

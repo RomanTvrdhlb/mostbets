@@ -1,0 +1,41 @@
+.main-form{
+    background-color: rgba(var(--bg-n),1.0);
+    padding: 15px;
+    border: 1px solid var(--br-c);
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(15px, 1.7544vw, 20px);
+
+    &__title{
+        font-size: clamp(16px, 1.7544vw, 20px);
+        line-height: 160%;
+        font-weight: 700;
+        font-family:var(--font-family);
+    }
+
+    &__box{
+        display: grid;
+        grid-template-columns: 1fr .5fr;
+        align-items: center;
+        grid-gap: clamp(10px, 1.3158vw, 15px);
+    }
+
+    &__label{
+        width: 100%;
+    }
+ 
+    &__input{
+        min-height: 38px;
+        padding: 6px 12px;
+        border-radius: 3px;
+        background-color: rgba(var(--bg-a),1.0);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .05) inset;
+        border: 1px solid var(--br-o);
+        max-width: 100%;
+        color: rgba(var(--cl-d),1.0);
+        font-family: var(--font-family);
+        font-size: 14px;
+        line-height: normal;
+    }
+
+}

@@ -1,0 +1,13 @@
+.casinos-list{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(20px, 2.6316vw, 30px);
+
+    &__item{
+        display: flex;
+    }
+
+    &--mode{
+        grid-gap: 30px;
+    }
+}

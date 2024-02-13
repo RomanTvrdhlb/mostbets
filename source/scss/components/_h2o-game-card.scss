@@ -1,0 +1,109 @@
+.h2o-game-card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+
+    &:hover{
+       .h2o-game-card{
+        &__image{
+            img,picture{
+                transform: scale(1.2);
+            }
+        }
+        &__wrapp{
+        opacity: 1;
+        visibility: visible;
+       }
+    } 
+    }
+
+    &__btn{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rebeccapurple;
+        z-index: 20;
+    }
+
+    &__wrapp{
+        transition: all .4s;
+        opacity: 0;
+        visibility: hidden;
+        padding: 15px;
+        position: absolute;
+        inset: 0;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(var(--bg-h),1.0);
+    }
+  
+
+    &__image{
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+     
+        img{
+            transition: all .4s;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+
+    &__title{
+        font-family:  var(--font-family);
+        color: rgba(var(--cl-f),1.0);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.1;
+        max-height: 32px;
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        transition: .3s;
+
+        &:hover{
+            color: rgba(var(--cl-c),1.0);
+        }
+    }
+
+    &__providers{
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 5px;
+    }
+
+    .h2o-blue-button{
+        cursor: pointer;
+        width: fit-content;
+        background-color: rgba(var(--bg-d),1.0);
+        border-radius: 20px;
+        color: rgba(var(--cl-g),1.0);
+        font-size: 14px;
+        line-height: 1;
+        padding: 3px 10px;
+        text-transform: uppercase;
+        transition: .4s;
+
+        &:hover{
+            color: rgba(var(--cl-a),1.0);
+        }
+    }
+}

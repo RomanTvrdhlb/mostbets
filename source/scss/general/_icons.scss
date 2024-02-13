@@ -1,0 +1,445 @@
+.h2o-icon {
+  &-money {
+    background-image: url(../img/index/money.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    bottom: 0;
+    height: clamp(44px, 4.0323vw, 50px);
+    position: absolute;
+    right: 0;
+    width: clamp(45px, 4.8387vw, 60px);
+  }
+
+  &-lock {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url(../img/sprite/lock.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-shop {
+    width: 18px;
+    height: 18px;
+    display: block;
+    background-image: url(../img/sprite/shop.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-android {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url(../img/sprite/android.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-apple {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url(../img/sprite/apple.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-box {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url(../img/sprite/box.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-stock {
+    width: 54px;
+    height: 48px;
+    display: block;
+    background-image: url(../img/sprite/stock.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-logo {
+    background-image: url(../img/sprite/logo.svg);
+    width: clamp(180px, 19.0323vw, 236px);
+    height: clamp(30px, 3.2258vw, 40px);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+  }
+
+  &-play {
+    background-image: url(../img/sprite/play.svg);
+    width: 40px;
+    height: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+  }
+
+  &-cup {
+    background-image: url(../img/sprite/cup.svg);
+    width: 15px;
+    height: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 60% 60%;
+    display: block;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: 50%;
+      background: rgba(var(--bg-d), 1);
+    }
+  }
+
+  &-flash {
+    background-image: url(../img/sprite/flash.svg);
+    width: 15px;
+    height: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 60% 60%;
+    display: block;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: 50%;
+      background: rgba(var(--bg-g), 1);
+    }
+  }
+
+  &-fire {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-image: url(../img/sprite/fire.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-new {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-image: url(../img/sprite/new.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-star {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-image: url(../img/sprite/star.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-search {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url(../img/sprite/search.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-clear {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url(../img/sprite/clear.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-slots {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-image: url(../img/sprite/slots.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-roulette {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-image: url(../img/sprite/roulette.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-cards {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-image: url(../img/sprite/cards.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-lotteries {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-image: url(../img/sprite/lotteries.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-jackpots {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-image: url(../img/sprite/jackpots.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-games {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-image: url(../img/sprite/games.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-shop {
+    width: 18px;
+    height: 18px;
+    display: block;
+    background-image: url(../img/sprite/shop.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-aviator {
+    width: 67px;
+    height: 18px;
+    display: block;
+    background-image: url(../img/sprite/aviator.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-cabin {
+    width: 26px;
+    height: 13px;
+    display: block;
+    background-image: url(../img/sprite/cabin.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-game {
+    width: 54px;
+    height: 48px;
+    display: block;
+    background-image: url(../img/sprite/game.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-sport {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-image: url(../img/sprite/sport.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  
+  &-more {
+    width: 20px;
+    height: 14px;
+    display: block;
+    background-image: url(../img/sprite/more.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-master {
+    width: clamp(28px, 2.7419vw, 34px);
+    height: clamp(20px, 2.1774vw, 27px);
+    display: block;
+    background-image: url(../img/sprite/master.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-visa {
+    width: clamp(80px, 9.6774vw, 120px);
+    height: clamp(20px, 2.1774vw, 27px);
+    display: block;
+    background-image: url(../img/sprite/visa.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-maestro {
+    width: clamp(45px, 4.8387vw, 60px);
+    height: clamp(20px, 2.1774vw, 27px);
+    display: block;
+    background-image: url(../img/sprite/maestro.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-webmoney {
+    width: clamp(90px, 9.6774vw, 120px);
+    height: clamp(20px, 2.1774vw, 27px);
+    display: block;
+    background-image: url(../img/sprite/webmoney.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-ecopayz {
+    width: clamp(90px, 9.6774vw, 120px);
+    height: clamp(20px, 2.1774vw, 27px);
+    display: block;
+    background-image: url(../img/sprite/ecopayz.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-btc {
+    width: clamp(90px, 9.6774vw, 120px);
+    height: clamp(20px, 2.1774vw, 27px);
+    display: block;
+    background-image: url(../img/sprite/btc.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-fifa {
+    width: clamp(59px, 6.371vw, 79px);
+    height: clamp(26px, 4.5161vw, 56px);
+    display: block;
+    background-image: url(../img/sprite/fifa.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-nhl {
+    width: clamp(20px, 3.2258vw, 40px);
+    height: clamp(26px, 4.5161vw, 56px);
+    display: block;
+    background-image: url(../img/sprite/nhl.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-wta {
+    width: clamp(37px, 4.5968vw, 57px);
+    height: clamp(26px, 4.5161vw, 56px);
+    display: block;
+    background-image: url(../img/sprite/wta.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-fiba {
+    width: clamp(41px, 4.9194vw, 61px);
+    height: clamp(26px, 4.5161vw, 56px);
+    display: block;
+    background-image: url(../img/sprite/fiba.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-atp {
+    width: clamp(29px, 3.9516vw, 49px);
+    height: clamp(26px, 4.5161vw, 56px);
+    display: block;
+    background-image: url(../img/sprite/atp.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-uefa {
+    width: clamp(51px, 5.7258vw, 71px);
+    height: clamp(26px, 4.5161vw, 56px);
+    display: block;
+    background-image: url(../img/sprite/uefa.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-ihf {
+    width: clamp(79px, 7.9839vw, 99px);
+    height: clamp(26px, 4.5161vw, 56px);
+    display: block;
+    background-image: url(../img/sprite/ihf.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-nba {
+    width: clamp(48px, 5.4839vw, 68px);
+    height: clamp(26px, 4.5161vw, 56px);
+    display: block;
+    background-image: url(../img/sprite/nba.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

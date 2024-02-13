@@ -1,0 +1,60 @@
+.author-card{
+    display: grid;
+    grid-template-columns: 36% 64%;
+    grid-gap: 15px;
+    width: 100%;
+    padding: 18px 0px;
+    position: relative;
+    border-top: solid 1px var(--br-r);
+    border-bottom: solid 1px var(--br-r);
+
+    &__wrapp{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 5px;
+    }
+
+    &__inner{
+        display: flex;
+        grid-gap: 15px;
+        align-items: center;
+    }
+
+    &__title{
+        color: rgba(var(--cl-d),1.0);
+        font-size: 16px;
+        line-height: normal;
+        font-family: var(--font-family);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+
+    &__position{
+        color: rgba(var(--cl-d),0.7);
+        font-size: 14px;
+        line-height: normal;
+        font-family: var(--font-family);
+    }
+
+    &__box{
+        font-family: var(--font-family);
+        font-size: 14px;
+        line-height: 18px;
+        border-left: solid 1px var(--br-r);
+        padding-left: clamp(15px, 3.5088vw, 40px);
+
+        @include mobile{
+            padding: 18px 0 0;
+            border-left: none;
+            border-top: solid 1px var(--br-r);
+        }
+    }
+
+    @include mobile{
+        grid-template-columns: 1fr;
+    }
+}

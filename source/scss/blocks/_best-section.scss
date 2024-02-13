@@ -1,0 +1,14 @@
+.best-section{
+    background-color: rgba(var(--bg-c),1.0);
+    padding: clamp(20px, 2.6316vw, 30px) 0 clamp(30px, 5.2632vw, 60px);
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+    }
+
+    .choice-nav{
+        padding-bottom: 20px;
+    }
+}

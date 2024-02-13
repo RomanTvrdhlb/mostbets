@@ -1,0 +1,51 @@
+.h2o-main-top {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  &__title { 
+    font-family: var(--font-family);
+    color: rgba(var(--cl-a), 1);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: var(--app-base-spacing);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    grid-gap: 8px;
+    padding-left: 62px;
+    position: relative;
+
+    i{
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-41%);
+    }
+  }
+
+  &__btn{
+    background-color: rgba(var(--bg-i),1.0);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    grid-gap: 8px;
+    height: 40px;
+    padding: 10px 20px;
+    transition: .2s;
+    color: rgba(var(--cl-a),1.0);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    font-family: var(--font-family);
+
+    &:hover{
+      background-color: rgba(var(--bg-j),1.0);
+    }
+
+    i{
+      position: relative;
+      top: -1px;
+    }
+  }
+}
