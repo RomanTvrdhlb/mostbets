@@ -1,6 +1,6 @@
 .h2o-first-section {
   position: relative;
-  margin:-20px 0 clamp(20px, 2.4194vw, 30px);
+  margin:-20px 0 30px;
   min-height: 370px;
 
   @include for-big-desktop {

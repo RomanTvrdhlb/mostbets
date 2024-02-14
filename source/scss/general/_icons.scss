@@ -183,8 +183,8 @@
   }
 
   &-fire {
-    width: 40px;
-    height: 40px;
+    width: clamp(30px, 3.9063vw, 40px);
+    height: clamp(30px, 3.9063vw, 40px);
     display: block;
     background-image: url(../img/sprite/fire.svg);
     background-position: center center;
@@ -193,8 +193,8 @@
   }
 
   &-new {
-    width: 40px;
-    height: 40px;
+    width: clamp(30px, 3.9063vw, 40px);
+    height: clamp(30px, 3.9063vw, 40px);
     display: block;
     background-image: url(../img/sprite/new.svg);
     background-position: center center;
@@ -203,8 +203,8 @@
   }
 
   &-star {
-    width: 40px;
-    height: 40px;
+    width: clamp(30px, 3.9063vw, 40px);
+    height: clamp(30px, 3.9063vw, 40px);
     display: block;
     background-image: url(../img/sprite/star.svg);
     background-position: center center;
@@ -233,8 +233,8 @@
   }
 
   &-slots {
-    width: 40px;
-    height: 40px;
+    width: clamp(30px, 3.9063vw, 40px);
+    height: clamp(30px, 3.9063vw, 40px);
     display: block;
     background-image: url(../img/sprite/slots.svg);
     background-position: center center;
@@ -243,8 +243,8 @@
   }
 
   &-roulette {
-    width: 40px;
-    height: 40px;
+    width: clamp(30px, 3.9063vw, 40px);
+    height: clamp(30px, 3.9063vw, 40px);
     display: block;
     background-image: url(../img/sprite/roulette.svg);
     background-position: center center;
@@ -253,8 +253,8 @@
   }
 
   &-cards {
-    width: 40px;
-    height: 40px;
+    width: clamp(30px, 3.9063vw, 40px);
+    height: clamp(30px, 3.9063vw, 40px);
     display: block;
     background-image: url(../img/sprite/cards.svg);
     background-position: center center;
@@ -263,8 +263,8 @@
   }
 
   &-lotteries {
-    width: 40px;
-    height: 40px;
+    width: clamp(30px, 3.9063vw, 40px);
+    height: clamp(30px, 3.9063vw, 40px);
     display: block;
     background-image: url(../img/sprite/lotteries.svg);
     background-position: center center;
@@ -273,8 +273,8 @@
   }
 
   &-jackpots {
-    width: 40px;
-    height: 40px;
+    width: clamp(30px, 3.9063vw, 40px);
+    height: clamp(30px, 3.9063vw, 40px);
     display: block;
     background-image: url(../img/sprite/jackpots.svg);
     background-position: center center;
@@ -283,8 +283,8 @@
   }
 
   &-games {
-    width: 40px;
-    height: 40px;
+    width: clamp(30px, 3.9063vw, 40px);
+    height: clamp(30px, 3.9063vw, 40px);
     display: block;
     background-image: url(../img/sprite/games.svg);
     background-position: center center;
@@ -333,8 +333,8 @@
   }
 
   &-sport {
-    width: 40px;
-    height: 40px;
+    width: clamp(30px, 3.9063vw, 40px);
+    height: clamp(30px, 3.9063vw, 40px);
     display: block;
     background-image: url(../img/sprite/sport.svg);
     background-position: center center;

@@ -7,9 +7,6 @@ const mainSlider = document.querySelector(".h2o-main-slider");
 const accParrent = [...document.querySelectorAll("[data-accordion-init]")];
 const htmlEl = document.documentElement;
 const bodyEl = document.body;
-// const bonusCards = document.querySelectorAll(".bonus-card");
-// const bonusMenuBtn = document.querySelector(".header-menu__btn");
-// const tooltipBlocks = document.querySelectorAll('.main-prop');
 const stockSlider = document.querySelector('.h2o-stock-slider');
 const bonusSlider = document.querySelector('.h2o-bonus-slider');
 const asideMenu = document.querySelector('.h2o-sidebar');
@@ -86,18 +83,6 @@ const elementHeight = (el, variableName) => {
 }
 //------------------------------------------------
 
-// //----bonusCardHandler----------------------------
-// bonusCards &&
-//   bonusCards.forEach(function (card) {
-//     const btn = card.querySelector(".bonus-card__button");
-//     if (btn) {
-//       btn.addEventListener("click", function (e) {
-//         e.preventDefault();
-//         card.classList.toggle("active");
-//       });
-//     }
-//   });
-
 //----asideMenuHandler----------------------------
 asideMenu && asideMenuBtn &&
   asideMenuBtn.addEventListener("click", function (e) {
@@ -112,24 +97,6 @@ asideMenu && asideMenuBtn &&
       removeCustomClass(asideMenu, 'active');
     }
   });
-
-// //----tooltipHandler-----------------------------
-// tooltipBlocks && tooltipBlocks.forEach(function(block){
-//   const btn = block.querySelector('.tooltip-btn');
-  
-//   btn && btn.addEventListener('click', function(e){
-//     e.preventDefault();
-//       removeClassInArray(tooltipBlocks, 'active');
-//       toggleCustomClass(block, 'active');
-
-//  document.addEventListener("click", function (event) {
-//     const e = block;
-
-//     if (!e.contains(event.target))
-//        removeCustomClass(block, 'active');
-//   });
-//   })
-// })  
  
 //----accordion----------------------------------
 window.addEventListener("DOMContentLoaded", () => {
@@ -273,7 +240,7 @@ if (overlay) {
   });
 }
 
-//----slider------------------------------------
+//----sliders------------------------------------
 
 mainSlider &&
   new Splide(mainSlider, {
@@ -312,14 +279,13 @@ mainSlider &&
 
   bonusSlider && new Splide( bonusSlider, {
     type   : 'slide',
-    perPage: 4,
-    gap:10,
-    speed:1200,
- 
+    perPage: 1,
+    click: true,
+    speed:1200, 
     pagination:false,
+    gap: 10,
   
   } ).mount();
-
 
 //----stickyHeader------------------------------
 let lastScroll = 0;
@@ -347,9 +313,8 @@ function stickyHeaderFunction(breakpoint){
 stickyHeaderFunction(320);
 elementHeight(header, "header-height");
 
-//----------------------------------------------
-
-searchForms.forEach(function(form){
+//------search----------------------------------
+searchForms && searchForms.forEach(function(form){
   const input = form.querySelector('input');
   const value = input.value;
   const clearBtn = form.querySelector('.h2o-search-form__clear');

@@ -1,10 +1,34 @@
 .h2o-banners-section{
     background-color: rgba(var(--bg-l),1.0);
     padding: 10px 0 20px;
+    margin-bottom: 20px;
 
     &__box{
         display: grid;
         grid-template-columns: 240px 1fr 240px;
         grid-gap: clamp(15px, 1.6129vw, 20px);
+
+        @include tablet{
+            grid-template-columns: repeat(2, 1fr);
+
+            .h2o-bonus-slider{
+                grid-column: 1/-1;
+                grid-row: 1;
+            }
+        }
+
+        @include mobile{
+            grid-template-columns: 1fr;
+
+            .h2o-bonus-slider{
+                order: 1;
+                grid-column: initial;
+                grid-row: initial;
+            }
+
+            .h2o-side-banner{
+                order: 2;
+            }
+        }
     }
 }

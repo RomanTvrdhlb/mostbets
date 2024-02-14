@@ -10,7 +10,7 @@
     &__item{
         align-items: center;
         display: flex;
-        height: 60px;
+        height: clamp(45px, 5.8594vw, 60px);
         width: 100%;
         border-top: 2px solid var(--br-d);
 
@@ -23,7 +23,9 @@
     &__link{
         align-items: center;
         font-family: var(--font-family);
-        color: var(--color-main-black);
+        font-weight: 500;
+        font-size: clamp(14px, 1.5625vw, 16px);
+        color: rgba(var(--cl-b),1.0);
         display: flex;
         transition: .2s;
         width: 100%;

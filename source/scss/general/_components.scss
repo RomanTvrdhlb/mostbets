@@ -1,47 +1,29 @@
 // ----------------- MAIN COMPONENTS -----------------
-@import "components/header-info.scss";
-@import "components/header-menu.scss";
-@import "components/header-bonus";
-@import "components/main-brands";
-@import "components/main-prop";
 @import "components/h2o-main-top.scss";
-@import "components/h2o-stock-card.scss";
-@import "components/main-download.scss";
 @import "components/h2o-main-social.scss";
-@import "components/top-game.scss";
-@import "components/main-casino.scss";
-@import "components/main-bonus.scss";
-@import "components/main-vote.scss";
-@import "components/main-table.scss";
-@import "components/main-review.scss";
 @import "components/h2o-main-slider.scss";
-
+@import "components/h2o-sidebar-banner";
+@import "components/h2o-stock-slider";
+@import "components/h2o-side-banner";
+@import "components/h2o-bonus-slider";
+@import "components/h2o-main-box";
 // ----------------- MAIN COMPONENTS -----------------
 
 // ----------------- BLOCK COMPONENTS -----------------
 @import "components/h2o-game-card.scss";
-@import "components/author-card.scss";
-@import "components/brand-card";
-@import "components/casino-card";
-@import "components/bonus-card.scss";
-@import "components/main-form.scss";
-@import "components/accordion.scss";
+@import "components/h2o-stock-card.scss";
+@import "components/h2o-accordion.scss";
+@import "components/h2o-play-card";
+@import "components/h2o-bonus-card";
 // ----------------- BLOCK COMPONENTS -----------------
 
 // ----------------- GRID COMPONENTS -----------------
 @import "components/h2o-header-nav";
 @import "components/h2o-sidebar-nav";
-@import "components/h2o-sidebar-banner";
 @import "components/h2o-choice-nav";
 @import "components/h2o-games-list";
 @import "components/h2o-footer-nav";
-@import "components/h2o-stock-slider";
-@import "components/h2o-play-card";
 @import "components/h2o-bonus-nav";
 @import "components/h2o-bonus-list";
-@import "components/h2o-bonus-card";
-@import "components/h2o-side-banner";
-@import "components/h2o-bonus-slider";
-
 
 // ----------------- GRID COMPONENTS -----------------

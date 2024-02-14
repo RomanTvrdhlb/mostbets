@@ -15,10 +15,10 @@
 
     &__link{
         font-family: var(--font-family);
-        font-size: 16px;
+        font-size: clamp(14px, 1.5625vw, 16px);
         font-weight: 500;
-        line-height: 60px;
-        max-width: 160px;
+        line-height: 110%;
+        width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
         vertical-align: middle;
@@ -28,7 +28,7 @@
         align-items: center;
         grid-gap: 10px;
         display: flex;
-        height: 60px;
+        height: clamp(45px, 5.8594vw, 60px);
 
         &:hover{
             color: rgba(var(--cl-e),1.0);
