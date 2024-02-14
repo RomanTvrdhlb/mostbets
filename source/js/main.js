@@ -12,6 +12,7 @@ const bonusSlider = document.querySelector('.h2o-bonus-slider');
 const asideMenu = document.querySelector('.h2o-sidebar');
 const asideMenuBtn = document.querySelector('.h2o-aside-button');
 const searchForms = document.querySelectorAll('.h2o-search-form');
+
 //------------------------------------------------
 
 //----customFunction------------------------------
@@ -277,13 +278,13 @@ mainSlider &&
     }
   } ).mount();
 
-  bonusSlider && new Splide( bonusSlider, {
+
+  bonusSlider && new Splide(bonusSlider, {
     type   : 'slide',
     perPage: 1,
     click: true,
-    speed:1200, 
+    speed:1500, 
     pagination:false,
-    gap: 10,
   
   } ).mount();
 
