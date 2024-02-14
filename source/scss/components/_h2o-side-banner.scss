@@ -10,7 +10,8 @@
     height: 274px;
 
     @include mobile{
-        height: 240px;
+        // height: 240px;
+        height: clamp(170px, 34.722vw, 200px);
     }
 
     &__box{
@@ -31,25 +32,29 @@
     &__image{
         margin-top: -10px;
 
-     
+       
 
-        @include tablet{
-            &--mode{
-                margin-top: 15px;
-            }
-        }
 
         @include mobile{
-            width: clamp(150px, 21.2891vw, 218px);
-            height: clamp(160px, 22.168vw, 227px);
-    
-            &--mode{
-                width: clamp(180px, 21.2891vw, 218px);
-                height: clamp(129px, 22.168vw, 227px);
-            }
+            width: clamp(140px, 21.2891vw, 218px);
+            height: clamp(145px, 22.168vw, 227px);
+            margin-top: -8px;
+
             img,picture{
                 width: 100%;
                 height: 100%;
+            }
+        }
+
+        &--mode{
+            @include tablet{
+                margin-top: 15px;
+            }
+
+            @include mobile{
+                margin-top: -4px;
+                width: clamp(136px, 31.25vw, 180px);
+                height: clamp(98px, 22.569vw, 130px);
             }
         }
     }

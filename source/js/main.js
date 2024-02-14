@@ -8,7 +8,8 @@ const accParrent = [...document.querySelectorAll("[data-accordion-init]")];
 const htmlEl = document.documentElement;
 const bodyEl = document.body;
 const stockSlider = document.querySelector('.h2o-stock-slider');
-const bonusSlider = document.querySelector('.h2o-bonus-slider');
+const bonusSliderElement = document.querySelector('.h2o-bonus-slider');
+const slides = document.querySelectorAll('.h2o-bonus-slider__slide');
 const asideMenu = document.querySelector('.h2o-sidebar');
 const asideMenuBtn = document.querySelector('.h2o-aside-button');
 const searchForms = document.querySelectorAll('.h2o-search-form');
@@ -278,15 +279,35 @@ mainSlider &&
     }
   } ).mount();
 
-
-  bonusSlider && new Splide(bonusSlider, {
-    type   : 'slide',
-    perPage: 1,
-    click: true,
-    speed:1500, 
-    pagination:false,
   
-  } ).mount();
+  const bonusSlider = bonusSliderElement && new Splide(bonusSliderElement, {
+      type   : 'slide',
+      perPage: 1,
+      fixedWidth: 'clamp(540px, 35.417vw, 680px)',
+      updateOnMove: true,
+      speed: 800,
+      click: true,
+      pagination: false,
+      arrows: false,
+      drag: false,
+      mediaQuery: 'max',
+      breakpoints: {
+        1240: {
+          perPage: '1',
+          gap: 10,
+          fixedWidth: '100%',
+          drag: true,
+        }
+      }
+  }).mount();
+
+  bonusSliderElement && slides.forEach((slide, index) => {
+    slide.addEventListener('click', () => {
+      bonusSlider.go(index >= slides.length - 3 ? 0 : index);
+  });
+});
+
+
 
 //----stickyHeader------------------------------
 let lastScroll = 0;
