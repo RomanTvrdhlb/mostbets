@@ -149,10 +149,23 @@
 
 .h2o-main-subtitle {
     font-family: var(--font-family);
-    color: rgba(var(--cl-d), 1);
-    font-size: clamp(16px, 1.4516vw, 18px);
+    color: rgba(var(--cl-a), 1);
+    font-size: clamp(16px, 1.9531vw, 20px);
     font-weight: 500;
+    padding-left: 15px;
     position: relative;
+
+    &::before{
+      background: rgba(var(--cl-d), 1);
+      content: "";
+      display: block;
+      left: 0;
+      position: absolute;
+      height: 80%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+    }
 }
 
 .h2o-main-link{
@@ -222,8 +235,6 @@ ul:not([class]) {
 }
 
 table:not([class]){
-  align-self: center;
-		overflow: hidden;
     width:100%;
 		border-collapse:collapse;
 
@@ -253,3 +264,4 @@ table:not([class]){
       border: solid 1px var(--br-e);
     }
 }
+

@@ -302,6 +302,7 @@ mainSlider &&
   }).mount();
 
   bonusSliderElement && slides.forEach((slide, index) => {
+    slide.style.zIndex = slides.length - index;
     slide.addEventListener('click', () => {
       bonusSlider.go(index >= slides.length - 3 ? 0 : index);
   });
