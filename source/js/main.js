@@ -283,9 +283,11 @@ mainSlider &&
   const bonusSlider = bonusSliderElement && new Splide(bonusSliderElement, {
       type   : 'slide',
       perPage: 1,
+      autoplay: true,
+      interval: 3500,
       fixedWidth: 'clamp(540px, 35.417vw, 680px)',
       updateOnMove: true,
-      speed: 800,
+      speed: 1250,
       click: true,
       pagination: false,
       arrows: false,
@@ -300,6 +302,15 @@ mainSlider &&
         }
       }
   }).mount();
+
+  bonusSlider.on('moved', function (newIndex) {
+    const totalSlides = bonusSlider.length;
+    const rewindThreshold = 3;
+
+    if (newIndex === totalSlides - rewindThreshold) {
+        bonusSlider.go(0);
+    }
+});
 
   bonusSliderElement && slides.forEach((slide, index) => {
     slide.style.zIndex = slides.length - index;
