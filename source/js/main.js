@@ -236,7 +236,7 @@ const hideMenuHandler = function (overlay, mobileMenu, burgers) {
 if (overlay) {
   mobileMenuHandler(overlay, mobileMenu, burgers);
   overlay.addEventListener("click", function (e) {
-    e.target.classList.contains("overlay")
+    e.target.classList.contains("h2o-overlay")
       ? hideMenuHandler(overlay, mobileMenu, burgers)
       : null;
   });
