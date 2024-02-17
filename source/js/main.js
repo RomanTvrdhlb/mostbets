@@ -279,8 +279,8 @@ mainSlider &&
     }
   } ).mount();
 
-  
-  const bonusSlider = bonusSliderElement && new Splide(bonusSliderElement, {
+  if(bonusSliderElement){
+  const bonusSlider = new Splide(bonusSliderElement, {
       type   : 'slide',
       perPage: 1,
       autoplay: true,
@@ -312,12 +312,14 @@ mainSlider &&
     }
 });
 
-  bonusSliderElement && slides.forEach((slide, index) => {
-    slide.style.zIndex = slides.length - index;
-    slide.addEventListener('click', () => {
-      bonusSlider.go(index >= slides.length - 3 ? 0 : index);
-  });
+bonusSliderElement && slides.forEach((slide, index) => {
+  slide.style.zIndex = slides.length - index;
+  slide.addEventListener('click', () => {
+    bonusSlider.go(index >= slides.length - 3 ? 0 : index);
 });
+});
+}
+
 
 
 
